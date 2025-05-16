@@ -177,3 +177,38 @@ export const counties = {
     "Worcester",
   ],
 };
+
+export const services = [
+  {
+    title: "Domestic Energy Assessment (EPC)",
+    description: "Energy Performance Certificates for homes, required when selling or renting a property.",
+    price: "From £50",
+    features: [
+      "Same-day booking available",
+      "24-hour certificate turnaround",
+      "Digital PDF delivery",
+      "Valid for 10 years"
+    ]
+  },
+  {
+    title: "Retrofit Assessment (EPC)",
+    description: "Comprehensive assessment for home energy improvements under PAS 2035.",
+    price: "From £70",
+    features: [
+      "PAS 2035 compliant",
+      "Whole-house assessment",
+      "Recommendations for grants"
+    ]
+  },
+  {
+    title: "SAP Assessment",
+    description: "Standard Assessment Procedure for new builds and conversions to demonstrate Building Regulations compliance.",
+    price: "From £120",
+    features: [
+      "Part L1A compliance reports",
+      "Design stage & as-built assessments",
+      "Energy performance predictions",
+      "Professional software analysis"
+    ]
+  }
+];

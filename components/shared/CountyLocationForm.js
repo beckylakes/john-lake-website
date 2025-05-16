@@ -16,7 +16,7 @@ const CountyLocationForm = () => {
   return (
     <div className="p-6 border-2 rounded-xl border-green-700 bg-gray-50 max-w-4xl mx-auto">
       <p className="text-center mb-4">
-        Tell me where you live:
+        Please fill out the following for your quote
       </p>
       <select
         className="w-full p-2 mb-4 border rounded"
