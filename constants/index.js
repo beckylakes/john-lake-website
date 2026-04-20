@@ -18,162 +18,26 @@ export const headerLinks = [
 ];
 
 export const counties = {
-  Derbyshire: [
-    "Alfreton",
-    "Ashbourne",
-    "Bakewell",
-    "Belper",
-    "Buxton",
-    "Chesterfield",
-    "Derby",
-    "Dronfield",
-    "Glossop",
-    "Ilkeston",
-    "Long Eaton",
-    "Matlock",
-    "Ripley",
-    "Swadlincote",
-  ],
-
-  Herefordshire: [
-    "Bromyard",
-    "Hereford",
-    "Kington",
-    "Ledbury",
-    "Leominster",
-    "Ross-on-Wye",
-  ],
-
-  Leicestershire: [
-    "Ashby-de-la-Zouch",
-    "Coalville",
-    "Hinckley",
-    "Loughborough",
-    "Market Harborough",
-    "Melton Mowbray",
-    "Oadby",
-    "Wigston",
-  ],
-
-  Lincolnshire: [
-    "Boston",
-    "Bourne",
-    "Grantham",
-    "Gainsborough",
-    "Lincoln",
-    "Louth",
-    "Market Deeping",
-    "Skegness",
-    "Spalding",
-    "Stamford",
-  ],
-
-  Northamptonshire: [
-    "Brackley",
-    "Corby",
-    "Daventry",
-    "Desborough",
-    "Kettering",
-    "Northampton",
-    "Peterborough",
-    "Raunds",
-    "Rushden",
-    "Towcester",
-    "Wellingborough",
-  ],
-
-  Nottinghamshire: [
-    "Arnold",
-    "Beeston",
-    "Bingham",
-    "Carlton",
-    "Hucknall",
-    "Mansfield",
-    "Newark-on-Trent",
-    "Nottingham",
-    "Retford",
-    "Southwell",
-    "Worksop",
-  ],
-
-  Shropshire: [
-    "Bishop's Castle",
-    "Bridgnorth",
-    "Church Stretton",
-    "Craven Arms",
-    "Ludlow",
-    "Market Drayton",
-    "Oswestry",
-    "Shrewsbury",
-    "Telford",
-    "Wellington",
-    "Whitchurch",
-  ],
-
-  Staffordshire: [
-    "Burton upon Trent",
-    "Cannock",
-    "Cheadle",
-    "Eccleshall",
-    "Fazeley",
-    "Hednesford",
-    "Kidsgrove",
-    "Leek",
-    "Lichfield",
-    "Newcastle-under-Lyme",
-    "Rugeley",
-    "Stafford",
-    "Stoke-on-Trent",
-    "Stone",
-    "Tamworth",
-    "Uttoxeter",
-  ],
   Warwickshire: [
-    "Kenilworth",
-    "Leamington Spa",
-    "Nuneaton",
-    "Rugby",
     "Stratford-upon-Avon",
-    "Warwick",
+    "Wootton Wawen"
   ],
   "West Midlands": [
     "Birmingham",
-    "Coventry",
     "Dudley",
     "Halesowen",
-    "Oldbury",
-    "Sandwell",
+    "Longbridge",
+    "Rednal",
     "Solihull",
-    "Stourbridge",
-    "Sutton Coldfield",
-    "Walsall",
-    "West Bromwich",
-    "Wolverhampton",
+    "Stourbridge"
   ],
   Worcestershire: [
     "Alvechurch",
-    "Badsey",
-    "Belbroughton",
-    "Bewdley",
-    "Blakedown",
     "Bromsgrove",
-    "Droitwich",
-    "Evesham",
-    "Hagley",
-    "Hay-on-Wye",
-    "Hockley Heath",
-    "Kempsey",
+    "Droitwich Spa",
     "Kidderminster",
-    "Malvern",
-    "Pebworth",
     "Redditch",
     "Rubery",
-    "Stourport",
-    "Tenbury",
-    "Tredington",
-    "Upton on Severn",
-    "Welford on Avon",
-    "Wolverley",
     "Worcester",
   ],
 };
@@ -182,18 +46,31 @@ export const services = [
   {
     title: "Domestic Energy Assessment (EPC)",
     description: "Energy Performance Certificates for homes, required when selling or renting a property.",
-    price: "From £50",
+    price: "From £65",
     features: [
       "Same-day booking available",
       "24-hour certificate turnaround",
       "Digital PDF delivery",
-      "Valid for 10 years"
+      "Valid for 10 years",
+      "SPECIAL RATES for repeat work and multiple properties"
+    ]
+  },
+  {
+    title: "SAP Assessment",
+    description: "Standard Assessment Procedure for new builds and conversions to demonstrate Building Regulations compliance.",
+    price: "From £150",
+    features: [
+      "Part L1A compliance reports",
+      "Design stage & as-built assessments",
+      "Energy performance predictions",
+      "Professional software analysis",
+      "SPECIAL RATES for repeat work and multiple properties"
     ]
   },
   {
     title: "Retrofit Assessment (EPC)",
     description: "Comprehensive assessment for home energy improvements under PAS 2035.",
-    price: "From £70",
+    price: "From £120",
     features: [
       "PAS 2035 compliant",
       "Whole-house assessment",
@@ -201,14 +78,36 @@ export const services = [
     ]
   },
   {
-    title: "SAP Assessment",
-    description: "Standard Assessment Procedure for new builds and conversions to demonstrate Building Regulations compliance.",
-    price: "From £120",
+    title: "Floor Plan & Modelling",
+    description: "Detailed floor plans and models for property marketing, energy assessments, planning applications, and renovation projects.",
+    price: "From £50",
     features: [
-      "Part L1A compliance reports",
-      "Design stage & as-built assessments",
-      "Energy performance predictions",
-      "Professional software analysis"
+      "Accurate measurements",
+      "2D floor plans",
+      "Detailed models",
+      "Quick turnaround"
+    ]
+  },
+   {
+    title: "Stock Condition Survey",
+    description: "Comprehensive surveys to assess the condition of residential properties, identifying defects and maintenance needs.",
+    price: "From £50",
+    features: [
+      "Detailed property condition reports",
+      "Photographic evidence of defects",
+      "Maintenance recommendations",
+      "Compliance with housing standards"
+    ]
+  },
+   {
+    title: "Mould & Mildew Assessment",
+    description: "Specialised assessment for identifying and evaluating mould and mildew issues in residential properties.",
+    price: "From £50",
+    features: [
+      "Detailed inspection reports",
+      "Photographic evidence of growth",
+      "Health risk evaluations",
+      "Recommendations for remediation"
     ]
   }
 ];

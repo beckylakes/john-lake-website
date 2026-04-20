@@ -25,11 +25,11 @@ export default function Home() {
         <div className="relative z-10 wrapper grid grid-cols-1 gap-3 md:grid-cols-2 text-white">
           <div className="flex flex-col justify-center gap-8">
             <h1 className="h1-bold text-white">
-              EPC & Retrofit Solutions for{" "}
+              EPC & Sustainability Solutions for{" "}
               <span className="text-[#8cbc24]">the Midlands</span>
             </h1>
             <p className="p-regular-20 md:p-regular-24 text-white">
-              Certified domestic energy assessments and retrofit advice to
+              Certified domestic energy assessments and sustainability advice to
               improve your home's efficiency, reduce bills, and lower carbon
               emissions.
             </p>
@@ -58,12 +58,12 @@ export default function Home() {
       </section>
 
       {/* Location Form */}
-      <section className="m-6">
+      {/* <section className="m-6">
         <h2 className="text-2xl font-bold mb-3 text-center">
           Get A Quote
         </h2>
         <CountyLocationForm />
-      </section>
+      </section> */}
     </div>
   );
 }

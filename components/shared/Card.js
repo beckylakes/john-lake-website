@@ -4,7 +4,7 @@ import Link from "next/link";
 const Card = ({ service }) => {
   return (
     <div className="group relative flex min-h-[360px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[438px]">
-      {/* Service Content */}
+      {/* ... same as before ... */}
       <div className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4">
         {/* Price Badge */}
         <div className="flex gap-2">
@@ -13,31 +13,38 @@ const Card = ({ service }) => {
           </span>
         </div>
 
-        {/* Service Title */}
         <h3 className="p-medium-16 md:p-medium-20 line-clamp-2 flex-1 text-black">
           {service.title}
         </h3>
 
-        {/* Service Description */}
         <p className="p-medium-16 text-grey-500">
           {service.description}
         </p>
 
-        {/* Features List */}
         <ul className="mt-2 space-y-2">
-          {service.features.map((feature, i) => (
-            <li key={i} className="flex items-start">
-              <span className="text-[#8cbc24] mr-2">✓</span>
-              <span className="p-medium-14 text-grey-600">{feature}</span>
-            </li>
-          ))}
+          {service.features.map((feature, i) => {
+            if (feature.includes("SPECIAL RATES")) {
+              return (
+                <li key={i} className="flex items-start">
+                  <span className="text-yellow-500 text-2xl mr-2 animate-spin [animation-duration:3s]">★</span>
+                  <span className="p-medium-14 text-gray-600 font-extrabold">{feature}</span>
+                </li>
+              );
+            } else {
+              return (
+                <li key={i} className="flex items-start">
+                  <span className="text-[#8cbc24] mr-2">✓</span>
+                  <span className="p-medium-14 text-gray-600">{feature}</span>
+                </li>
+              );
+            }
+          })}
         </ul>
 
-        {/* Optional CTA Button */}
         <div className="mt-auto pt-4">
-          <Link 
-            href="/contact" 
-            className="p-medium-16 text-[#8cbc24] hover:underline"
+          <Link
+            href={`/contact?service=${encodeURIComponent(service.title)}`}
+            className="p-medium-16 text-[#8cbc24] hover:underline hover:font-bold"
           >
             Book Now →
           </Link>
