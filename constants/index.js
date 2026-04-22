@@ -1,20 +1,18 @@
 export const headerLinks = [
+  { label: "Home", route: "/" },
+  { label: "Services", route: "/services" },
   {
-    label: "Home",
-    route: "/",
+    label: "Guides",
+    route: "#",
+    children: [
+      { label: "Prepare for Your Visit", route: "/guides/prepare-for-your-visit" },
+      { label: "What to Expect", route: "/guides/what-to-expect" },
+      { label: "Energy Saving Tips", route: "/guides/energy-saving-tips" },
+    ],
   },
-  {
-    label: "Services",
-    route: "/services",
-  },
-  {
-    label: "About",
-    route: "/about",
-  },
-  {
-    label: "Contact",
-    route: "/contact",
-  },
+  { label: "FAQ", route: "/faq" },
+  { label: "About", route: "/about" },
+  { label: "Contact", route: "/contact" },
 ];
 
 export const counties = {
@@ -88,7 +86,7 @@ export const services = [
       "Quick turnaround"
     ]
   },
-   {
+  {
     title: "Stock Condition Survey",
     description: "Comprehensive surveys to assess the condition of residential properties, identifying defects and maintenance needs.",
     price: "From £50",
@@ -99,7 +97,7 @@ export const services = [
       "Compliance with housing standards"
     ]
   },
-   {
+  {
     title: "Mould & Mildew Assessment",
     description: "Specialised assessment for identifying and evaluating mould and mildew issues in residential properties.",
     price: "From £50",

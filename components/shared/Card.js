@@ -1,5 +1,6 @@
 // components/Card.js
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const Card = ({ service }) => {
   return (
@@ -42,12 +43,17 @@ const Card = ({ service }) => {
         </ul>
 
         <div className="mt-auto pt-4">
-          <Link
-            href={`/contact?service=${encodeURIComponent(service.title)}`}
-            className="p-medium-16 text-[#8cbc24] hover:underline hover:font-bold"
+          <Button
+            size="lg"
+            className="button bg-[#8cbc24] hover:bg-[#7ca822] text-white"
           >
-            Book Now →
-          </Link>
+            <Link
+              href={`/contact?service=${encodeURIComponent(service.title)}`}
+              className="p-medium-16 text-white"
+            >
+              Book Now →
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

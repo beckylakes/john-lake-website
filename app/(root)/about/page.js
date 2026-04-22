@@ -1,24 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import FadeUp from "@/components/shared/FadeUp";
 
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        {/* Animated title */}
+      <div className="mx-auto max-w-4xl">
         <FadeUp delay={0}>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="mb-6 text-4xl font-bold md:text-5xl">
             Your local Energy Expert:{" "}
             <span className="text-[#8cbc24]">John Lake</span>
           </h1>
         </FadeUp>
 
-        {/* Profile + Background section */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="mb-12 grid gap-8 md:grid-cols-2">
           <FadeUp delay={0.1}>
-            <div className="relative h-80 md:h-full rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div className="relative h-80 overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl md:h-full">
               <Image
                 src="/assets/profilepic.jpg"
                 alt="John Lake - Energy Assessor"
@@ -28,30 +26,32 @@ export default function AboutPage() {
               />
             </div>
           </FadeUp>
+
           <FadeUp delay={0.2}>
-            <div className="bg-amber-100/20 p-3 rounded-lg hover:bg-amber-100/30 transition-colors duration-300">
-              <h2 className="text-2xl font-semibold mb-4">Professional Background</h2>
+            <div className="rounded-lg bg-amber-100/20 p-3 transition-colors duration-300 hover:bg-amber-100/30">
+              <h2 className="mb-4 text-2xl font-semibold">Professional Background</h2>
               <p className="mb-4">
-                Fully accredited Domestic Energy and SAP 10 Assessor (DEA, OCDEA) and Retrofit Assessor
-                servicing clients such as architects, developers, & planning consultants across the Midlands.
+                Fully accredited Domestic Energy and SAP 10 Assessor (DEA, OCDEA)
+                and Retrofit Assessor servicing clients such as architects,
+                developers, & planning consultants across the Midlands.
               </p>
               <p className="mb-4">
-                Provides modern, solution-based approach working with latest methodologies, aiming to help
-                clients meet planning policies and regulations.
+                Provides modern, solution-based approach working with latest
+                methodologies, aiming to help clients meet planning policies and
+                regulations.
               </p>
               <p>
-                John strives to meet compliance and understands that there is no one size fits all solution
-                – adapting your approach is key for success.
+                John strives to meet compliance and understands that there is no one
+                size fits all solution – adapting your approach is key for success.
               </p>
             </div>
           </FadeUp>
         </div>
 
-        {/* Qualifications + Mission Statement */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="mb-12 grid gap-8 md:grid-cols-2">
           <FadeUp delay={0.3}>
-            <div className="bg-gray-100 p-6 rounded-lg hover:shadow-md transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4">Qualifications</h3>
+            <div className="rounded-lg bg-gray-100 p-6 transition-all duration-300 hover:shadow-md">
+              <h3 className="mb-4 text-xl font-semibold">Qualifications</h3>
               <ul className="space-y-3">
                 {[
                   "Domestic Energy Assessor (DEA) - Level 3",
@@ -60,9 +60,23 @@ export default function AboutPage() {
                   "Enhanced DBS Checked",
                   "Public Liability Insurance (£1m)",
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start opacity-0 animate-slideIn" style={{ animationDelay: `${0.4 + idx * 0.05}s` }}>
-                    <svg className="h-5 w-5 text-green-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <li
+                    key={idx}
+                    className="animate-slideIn flex items-start opacity-0"
+                    style={{ animationDelay: `${0.4 + idx * 0.05}s` }}
+                  >
+                    <svg
+                      className="mr-2 h-5 w-5 flex-shrink-0 text-green-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                     <span>{item}</span>
                   </li>
@@ -70,22 +84,22 @@ export default function AboutPage() {
               </ul>
             </div>
           </FadeUp>
+
           <FadeUp delay={0.4}>
-            <div className="bg-green-50 p-6 rounded-lg flex flex-col items-center justify-center text-center hover:shadow-md transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4">Mission Statement</h3>
+            <div className="flex flex-col items-center justify-center rounded-lg bg-green-50 p-6 text-center transition-all duration-300 hover:shadow-md">
+              <h3 className="mb-4 text-xl font-semibold">Mission Statement</h3>
               <p className="text-lg">
-                "I'm committed to helping homeowners and professionals navigate energy efficiency requirements
-                with clarity and confidence."
+                "I'm committed to helping homeowners and professionals navigate
+                energy efficiency requirements with clarity and confidence."
               </p>
             </div>
           </FadeUp>
         </div>
 
-        {/* Why Choose Me section */}
         <FadeUp delay={0.5}>
-          <div className="bg-[#13a9c2]/10 p-6 rounded-lg mb-12 hover:bg-[#13a9c2]/20 transition-colors duration-300">
-            <h2 className="text-2xl font-semibold mb-4">Why Choose Me?</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="mb-12 rounded-lg bg-[#13a9c2]/10 p-6 transition-colors duration-300 hover:bg-[#13a9c2]/20">
+            <h2 className="mb-4 text-2xl font-semibold">Why Choose Me?</h2>
+            <div className="grid gap-6 md:grid-cols-2">
               {[
                 {
                   title: "Local Expertise",
@@ -105,7 +119,7 @@ export default function AboutPage() {
                 },
               ].map((item, idx) => (
                 <div key={idx} className="group">
-                  <h3 className="text-lg font-medium mb-2 group-hover:text-[#13a9c2] transition-colors duration-200">
+                  <h3 className="mb-2 text-lg font-medium transition-colors duration-200 group-hover:text-[#13a9c2]">
                     {item.title}
                   </h3>
                   <p className="text-gray-700">{item.desc}</p>
@@ -118,35 +132,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-// ===== Helper Component for fade‑up animation =====
-const FadeUp = ({ children, delay = 0 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // animate only once
-        }
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" } // trigger slightly before entering
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
-      style={{ transitionDelay: `${delay}s` }}
-    >
-      {children}
-    </div>
-  );
-};
